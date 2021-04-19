@@ -1,6 +1,5 @@
 import dash_html_components as html
 from navbar import navbar_comp
-from application import *
 import datetime as datetime
 import dash_bootstrap_components as dbc
 import dash_html_components as html

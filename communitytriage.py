@@ -488,7 +488,7 @@ layout = html.Div(
 
 #############################################      Layout Div      #####################################################
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("dob_ac").value;
@@ -530,7 +530,7 @@ app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("edd_ac").value;
@@ -572,7 +572,7 @@ app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("deldate_ac").value;
@@ -614,7 +614,7 @@ app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("dose1date_ac").value;
@@ -656,7 +656,7 @@ app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("dose2date_ac").value;
@@ -697,7 +697,7 @@ app.clientside_callback(
 )
 #############################################    Local Functions   #####################################################
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("covidswabdate_ac").value;
@@ -738,7 +738,7 @@ app.clientside_callback(
 )
 #############################################    Local Functions   #####################################################
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("covidadmitdate_ac").value;
@@ -778,7 +778,7 @@ app.clientside_callback(
     Input('covidadmitdate_ac', 'value'),
 )
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("coviddischdate_ac").value;
@@ -820,7 +820,7 @@ app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("nhs_ac").value;
@@ -838,7 +838,7 @@ app.clientside_callback(
     Input('nhs_ac', 'value'),
 )
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("tel_ac").value;
@@ -856,7 +856,7 @@ app.clientside_callback(
     Input('tel_ac', 'value'),
 )
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("parity_ac").value;
@@ -874,7 +874,7 @@ app.clientside_callback(
     Input('parity_ac', 'value'),
 )
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt1 = document.getElementById("spo2_1ac").value;
@@ -891,7 +891,7 @@ app.clientside_callback(
     Output('spo2_1ac', 'children'),
     Input('spo2_1ac', 'value'),
 )
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt1 = document.getElementById("spo2_2ac").value;
@@ -909,7 +909,7 @@ app.clientside_callback(
     Input('spo2_2ac', 'value'),
 )
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("fhr_ac").value;
@@ -927,7 +927,7 @@ app.clientside_callback(
     Input('fhr_ac', 'value'),
 )
 
-app.clientside_callback(
+dash_app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("surname_ac").value;

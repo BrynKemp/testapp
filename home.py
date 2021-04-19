@@ -2,7 +2,6 @@ from navbar import navbar_comp
 import dash_html_components as html
 import datetime
 from codebank import *
-from application import *
 import dash_bootstrap_components as dbc
 import dash_html_components as html
 from communitytriage import tri_community
