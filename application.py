@@ -1,7 +1,3 @@
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-
 import pathlib
 import base64
 import io
@@ -13,6 +9,7 @@ import pandas as pd
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
+
 
 external_scripts = [
     {'src': 'https://momentjs.com/downloads/moment.min.js'},
