@@ -9,7 +9,7 @@ import json
 import datetime
 
 ## Page files
-from application import dash_app
+from app import dash_app
 from apps import home, communitytriage, datatemplates
 #from apps import home, communitytriage, rbhtriage, telephonetriage, experiment
 

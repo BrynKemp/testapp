@@ -1,5 +1,5 @@
 from dash.dependencies import Input, Output
-from application import dash_app
+from app import dash_app
 from apps.codebank import *
 from qbank import *
 
