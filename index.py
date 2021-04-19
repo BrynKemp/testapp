@@ -9,7 +9,7 @@ import datetime
 
 ## Page files
 from app import dash_app
-from apps import home, communitytriage, datatemplates
+from apps import home, communitytriage, datatemplates, qbank
 
 # from apps import home, communitytriage, rbhtriage, telephonetriage, experiment
 

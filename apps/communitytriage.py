@@ -1,7 +1,7 @@
 from dash.dependencies import Input, Output
 from app import dash_app
 from apps.codebank import *
-from qbank import *
+from apps.qbank import *
 
 
 #############################################    Local Functions   #####################################################
