@@ -5,6 +5,7 @@ import dash_html_components as html
 
 date_a = datetime.datetime.now().strftime("%d %b %Y")
 
+
 def gen_sidebar():
     return html.Div(
         id="gen_sidebar",
