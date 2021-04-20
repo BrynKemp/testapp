@@ -8,7 +8,7 @@ import json
 import datetime
 
 ## Page files
-from app import dash_app
+from app import app
 from apps import home, communitytriage, datatemplates, qbank
 
 # from apps import home, communitytriage, rbhtriage, telephonetriage, experiment
@@ -17,7 +17,7 @@ from apps import home, communitytriage, datatemplates, qbank
 
 covdatastore = dcc.Store(id='session', storage_type='session')
 
-dash_app.layout = html.Div(
+app.layout = html.Div(
     style={'display': 'inline-block', 'margin-bottom': '0%', 'padding-bottom': '0%',
            'background-color': '#f3fffe', 'overflow-y': 'hidden'},
     id="app-container",
@@ -35,8 +35,8 @@ dash_app.layout = html.Div(
 
 #############################################    Callbacks Index   #####################################################
 
-@dash_app.callback([Output('banner', 'children'), Output('page-content', 'children'), Output('left-bar', 'children')],
-                   Input('url', 'pathname'))
+@app.callback([Output('banner', 'children'), Output('page-content', 'children'), Output('left-bar', 'children')],
+              Input('url', 'pathname'))
 def display_page(pathname):
     if pathname == '/home':
         return banner_splash, home.layout, home.left_bar
@@ -55,8 +55,8 @@ def display_page(pathname):
     #     return telephonetriage.layout
 
 
-@dash_app.callback(Output('store', 'data'),
-                   [Input('data1', 'value'), Input('data2', 'value'), Input('data3', 'value')])
+@app.callback(Output('store', 'data'),
+              [Input('data1', 'value'), Input('data2', 'value'), Input('data3', 'value')])
 def update_data(data1, data2, data3):
     if data1 != '':
         return json.loads(data1)
@@ -69,4 +69,4 @@ def update_data(data1, data2, data3):
 #############################################    Local Functions   #####################################################
 
 if __name__ == '__main__':
-    dash_app.run_server(debug=True)
+    app.run_server(debug=True)

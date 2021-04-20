@@ -1,5 +1,5 @@
 from dash.dependencies import Input, Output
-from app import dash_app
+from app import app
 from apps.codebank import *
 from apps.qbank import *
 
@@ -240,7 +240,7 @@ def tri_community():
 
 ############################################      Callback Page    #####################################################
 #
-# @dash_app.callback([Output('session', 'data'),
+# @app.callback([Output('session', 'data'),
 #               Output('url', 'pathname')],
 #               [Input('communitytriage_btn_confirm', 'n_clicks')],
 #               [State('surname_ac', 'value'),
@@ -474,7 +474,7 @@ layout = html.Div(
 
 #############################################      Layout Div      #####################################################
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("dob_ac").value;
@@ -516,7 +516,7 @@ dash_app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("edd_ac").value;
@@ -558,7 +558,7 @@ dash_app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("deldate_ac").value;
@@ -600,7 +600,7 @@ dash_app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("dose1date_ac").value;
@@ -642,7 +642,7 @@ dash_app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("dose2date_ac").value;
@@ -683,7 +683,7 @@ dash_app.clientside_callback(
 )
 #############################################    Local Functions   #####################################################
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("covidswabdate_ac").value;
@@ -724,7 +724,7 @@ dash_app.clientside_callback(
 )
 #############################################    Local Functions   #####################################################
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("covidadmitdate_ac").value;
@@ -764,7 +764,7 @@ dash_app.clientside_callback(
     Input('covidadmitdate_ac', 'value'),
 )
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("coviddischdate_ac").value;
@@ -806,7 +806,7 @@ dash_app.clientside_callback(
 
 #############################################    Local Functions   #####################################################
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("nhs_ac").value;
@@ -824,7 +824,7 @@ dash_app.clientside_callback(
     Input('nhs_ac', 'value'),
 )
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("tel_ac").value;
@@ -842,7 +842,7 @@ dash_app.clientside_callback(
     Input('tel_ac', 'value'),
 )
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("parity_ac").value;
@@ -860,7 +860,7 @@ dash_app.clientside_callback(
     Input('parity_ac', 'value'),
 )
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt1 = document.getElementById("spo2_1ac").value;
@@ -877,7 +877,7 @@ dash_app.clientside_callback(
     Output('spo2_1ac', 'children'),
     Input('spo2_1ac', 'value'),
 )
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt1 = document.getElementById("spo2_2ac").value;
@@ -895,7 +895,7 @@ dash_app.clientside_callback(
     Input('spo2_2ac', 'value'),
 )
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("fhr_ac").value;
@@ -913,7 +913,7 @@ dash_app.clientside_callback(
     Input('fhr_ac', 'value'),
 )
 
-dash_app.clientside_callback(
+app.clientside_callback(
     """
     function(inputValue){
     var_txt = document.getElementById("surname_ac").value;

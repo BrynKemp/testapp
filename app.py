@@ -16,8 +16,7 @@ external_scripts = [
     'https://www.google-analytics.com/analytics.js',
     'https://clinicaltables.nlm.nih.gov/autocomplete-lhc-versions/17.0.2/autocomplete-lhc.min.js'
 ]
-
-dash_app = dash.Dash(
+app: Dash = dash.Dash(
     __name__,
     update_title=None,
     external_stylesheets=[dbc.themes.BOOTSTRAP],
@@ -26,13 +25,15 @@ dash_app = dash.Dash(
 )
 
 
-dash_app.title = 'Maternity Information System'
-app = dash_app.server
-dash_app.config.suppress_callback_exceptions = True
+app.title = 'Maternity Information System'
+server = app.server
+app.config.suppress_callback_exceptions = True
 
 # Path
 BASE_PATH = pathlib.Path(__file__).parent.resolve()
 DATA_PATH = BASE_PATH.joinpath("data").resolve()
+
+
 
 #
 #
